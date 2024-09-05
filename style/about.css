@@ -1,0 +1,12 @@
+.about {
+    margin-bottom: 50px;
+}
+
+.about__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about__text {
+    line-height: 30px;
+}

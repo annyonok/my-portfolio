@@ -1,49 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="public/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style/index.css">
-    <script defer src="js/swiper-bundle.min.js"></script>
     <script defer src="js/index.js"></script>
 </head>
 
 <body>
     <video autoplay loop muted plays-inline class="background-video">
-        <source
-            src="public/cover.mp4"
-            type="video/mp4">
+        <source src="public/cover.mp4" type="video/mp4">
     </video>
 
-    <div class="container">
-        <div class="circle-container">
-            <div class="circle">
-                <button id="close">
+    <header class="header">
+        <div class="container">
+            <nav class="header__navigation">
+                <ul class="navigation__list">
+                    <li class="list__item item"><a class="list__link link" href="#" data-hover="Проекты">Проекты</a>
+                    </li>
+                    <li class="list__item item"><a class="list__link link" href="#" data-hover="Мини-игры">Мини-игры</a>
+                    </li>
+                    <li class="list__item item"><a class="list__link link" href="#"
+                            data-hover="Мини-проекты">Мини-проекты</a></li>
+                    <li class="list__item item"><a class="list__link link" href="#" data-hover="Контакты">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="burger__list">
+                    <li class="burger__item item"><a class="link" href="#" data-hover="Проекты">Проекты</a></li>
+                    <li class="burger__item item"><a class="link" href="#" data-hover="Мини-игры">Мини-игры</a></li>
+                    <li class="burger__item item"><a class="link" href="#" data-hover="Мини-проекты">Мини-проекты</a>
+                    </li>
+                    <li class="burger__item item"><a class="link" href="#" data-hover="Контакты">Контакты</a></li>
+                </ul>
+
+                <button class="burger__close">
                     <img src="public/close.svg" alt="Close icon">
                 </button>
-                <button id="open">
-                    <img src="public/menu.svg" alt="Burger icon">
-                </button>
+
+            </nav>
+
+            <button class="burger__open">
+                <img src="public/menu.svg" alt="Menu icon">
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="about">
+            <div class="container">
+                <div class="about__content">
+                    <p class="about__text">
+                        Привет! Меня зовут Анна, я увлеченный фронтенд-разработчик.<br>Создание красивых и
+                        функциональных интерфейсов — это моя страсть.<br>Я постоянно совершенствую свои навыки, изучаю
+                        новые технологии и стремлюсь к тому, чтобы каждая моя работа была лучше предыдущей.<br>Мне
+                        нравится находить элегантные решения сложных задач и работать в команде,<br>где идеи
+                        превращаются в реальность.<br>Давайте создавать будущее вместе!
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content">
+        <section class="project">
+            <div class="container">
 
-        </div>
+                <h1 class="project__title">Проекты</h1>
 
-    </div>
+                <div class="card-grid">
+                    <a class="card" href="https://annyonok.github.io/aperture/" target="_blank">
+                        <div class="card__bg"
+                            style="background-image: url(public/aperture.jpg)">
+                        </div>
+                        <div class="card__content">
+                            <p class="card__category">landing page</p>
+                            <h3 class="card__heading">Aperture Studios</h3>
+                            <p class="card__category">html</p>
+                            <p class="card__category">css</p>
+                        </div>
+                    </a>
 
-    <nav>
-        <ul>
-            <li><a href="#"> Home</a></li>
-            <li><a href="#"> About</a></li>
-            <li><a href="#"> Contact</a></li>
-        </ul>
-    </nav>
+                    <a class="card" href="https://annyonok.github.io/simply-chocolate/" target="_blank">
+                        <div class="card__bg"
+                            style="background-image: url(public/chocolate.jpg)">
+                        </div>
+                        <div class="card__content">
+                            <p class="card__category">landing page</p>
+                            <h3 class="card__heading">Somply Chocolate - handmade chocolate shop</h3>
+                            <p class="card__category">html</p>
+                            <p class="card__category">css</p>
+                            <p class="card__category">swiperjs</p>
+                            <p class="card__category">jQuery</p>
+                        </div>
+                    </a>
+
+                    <a class="card" href="https://annyonok.github.io/nique/" target="_blank">
+                        <div class="card__bg"
+                            style="background-image: url(public/nique.jpg)">
+                        </div>
+                        <div class="card__content">
+                            <p class="card__category">многостраничный сайт</p>
+                            <h3 class="card__heading">Nique - Restaurant Website</h3>
+                            <p class="card__category">html</p>
+                            <p class="card__category">css</p>
+                            <p class="card__category">swiperjs</p>
+                        </div>
+                    </a>
+
+                    <a class="card" href="https://annyonok.github.io/movie-app/" target="_blank">
+                        <div class="card__bg"
+                            style="background-image: url(public/movie_app.jpg)">
+                        </div>
+                        <div class="card__content">
+                            <p class="card__category">киносайт</p>
+                            <h3 class="card__heading">MovieApp</h3>
+                            <p class="card__category">html</p>
+                            <p class="card__category">css</p>
+                            <p class="card__category">js</p>
+                            <p class="card__category">api</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mini-games">
+            <div class="container">
+
+            </div>
+        </section>
+
+    </main>
 
 
-    
+
+
+
 </body>
+
 </html>

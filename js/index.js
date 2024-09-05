@@ -1,44 +1,35 @@
 // Menu
-const open = document.getElementById('open')
-const close = document.getElementById('close')
-const container = document.querySelector('.container')
+document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // предотвращаем действие по умолчанию
 
-open.addEventListener('click', () => container.classList.add('show-nav'))
+        // Убираем класс 'current' у всех ссылок
+        document.querySelectorAll('.link').forEach(link => {
+            link.classList.remove('current');
+        });
 
-close.addEventListener('click', () => container.classList.remove('show-nav'))
+        // Добавляем класс 'current' к нажатой ссылке
+        this.classList.add('current');
+    });
+});
 
+const burgerOpen = document.querySelector('.burger__open');
+const burgerClose = document.querySelector('.burger__close');
+const burgerList = document.querySelector('.burger__list');
 
+function menuShow() {
+    burgerOpen.addEventListener('click', () => {
+        burgerList.classList.add('show');
+        burgerOpen.style.display = 'none';
+        burgerClose.style.display = 'block';
+    });
 
-// new Swiper('.swiper', {
-//   navigation: {
-//       nextEl: '.portfolio__arrow_right',
-//       prevEl: '.portfolio__arrow_left',
-//       disabledClass: 'portfolio__arrow_disable',
-//     },
-//     // Responsive breakpoints
-//   breakpoints: {
-//   // when window width is >= 480px
-//   480: {
-//     grid: {
-//       fill: 'row',
-//       rows: 1
-//     }
-//   },
-//   // when window width is >= 768px
-//   768: {
-//       slidesPerView: 2,
-//       grid: {
-//           fill: 'row',
-//           rows: 2
-//         }        
-//       },
-//   // when window width is >= 1440px
-//   1440: {
-//       slidesPerView: 2,
-//       grid: {
-//           fill: 'row',
-//           rows: 2
-//         }        
-//       }
-// }
-// });
+    burgerClose.addEventListener('click', () => {
+        burgerList.classList.remove('show');
+        burgerOpen.style.display = 'block';
+        burgerClose.style.display = 'none';
+    });
+}
+
+menuShow();
+
