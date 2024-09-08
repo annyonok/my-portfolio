@@ -23,8 +23,8 @@ function menuShow() {
 
 menuShow();
 
-// // Menu
-// $('.header__contacts-burger').click(() => {
-//     $('.header__contacts').slideToggle().css('display', 'flex');
-// })
+
+
+
+
 

@@ -15,8 +15,6 @@
 
 .header__contacts {
   display: flex;
-  position: static;
-  right: 0;
   padding: 15px;
   color: #ffffff;
   margin-top: 30px;
@@ -93,5 +91,25 @@
 
   .contacts__link {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__contacts-burger {
+    margin: 20px 10px 0 0;
+  }
+
+  .header__contacts-burger-close {
+    margin: 20px 10px 0 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .contacts__head {
+    font-size: 12px;
+  }
+
+  .contacts__link {
+    font-size: 10px;
   }
 }
