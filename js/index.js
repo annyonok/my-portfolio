@@ -1,24 +1,11 @@
 // Menu
-document.querySelectorAll('.link').forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault(); // предотвращаем действие по умолчанию
-
-        // Убираем класс 'current' у всех ссылок
-        document.querySelectorAll('.link').forEach(link => {
-            link.classList.remove('current');
-        });
-
-        // Добавляем класс 'current' к нажатой ссылке
-        this.classList.add('current');
-    });
-});
-
-const burgerOpen = document.querySelector('.burger__open');
-const burgerClose = document.querySelector('.burger__close');
-const burgerList = document.querySelector('.burger__list');
+const burgerOpen = document.querySelector('.header__contacts-burger');
+const burgerClose = document.querySelector('.header__contacts-burger-close');
+const burgerList = document.querySelector('.header__contacts');
 
 function menuShow() {
     burgerOpen.addEventListener('click', () => {
+        burgerList.classList.remove('hide');
         burgerList.classList.add('show');
         burgerOpen.style.display = 'none';
         burgerClose.style.display = 'block';
@@ -26,10 +13,18 @@ function menuShow() {
 
     burgerClose.addEventListener('click', () => {
         burgerList.classList.remove('show');
-        burgerOpen.style.display = 'block';
-        burgerClose.style.display = 'none';
+        burgerList.classList.add('hide');
+        setTimeout(() => {
+            burgerOpen.style.display = 'block';
+            burgerClose.style.display = 'none';
+        }, 300); // Задержка должна совпадать с длительностью перехода
     });
 }
 
 menuShow();
+
+// // Menu
+// $('.header__contacts-burger').click(() => {
+//     $('.header__contacts').slideToggle().css('display', 'flex');
+// })
 

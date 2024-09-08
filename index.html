@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="icon" href="public/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script defer src="js/index.js"></script>
 </head>
 
@@ -15,37 +16,27 @@
         <source src="public/cover.mp4" type="video/mp4">
     </video>
 
-    <header class="header">
-        <div class="container">
-            <nav class="header__navigation">
-                <ul class="navigation__list">
-                    <li class="list__item item"><a class="list__link link" href="#" data-hover="Проекты">Проекты</a>
+    <header class="page__header header">
+        <div class="container header__container">
+
+            <address class="header__contacts">
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <p class="contacts__head">Телефон</p>
+                        <a class="contacts__link" href="tel:+79591008773">+7 959 100 8773</a>
                     </li>
-                    <li class="list__item item"><a class="list__link link" href="#" data-hover="Мини-игры">Мини-игры</a>
+                    <li class="contacts__item">
+                        <p class="contacts__head">E-mail</p>
+                        <a class="contacts__link" href="mailto:annyonok@ya.ru">annyonok@ya.ru</a>
                     </li>
-                    <li class="list__item item"><a class="list__link link" href="#"
-                            data-hover="Мини-проекты">Мини-проекты</a></li>
-                    <li class="list__item item"><a class="list__link link" href="#" data-hover="Контакты">Контакты</a>
+                    <li class="contacts__item">
+                        <p class="contacts__head">Telegram</p>
+                        <a class="contacts__link" target="_blank" href="https://t.me/annyonok">t.me/annyonok</a>
                     </li>
                 </ul>
-
-                <ul class="burger__list">
-                    <li class="burger__item item"><a class="link" href="#" data-hover="Проекты">Проекты</a></li>
-                    <li class="burger__item item"><a class="link" href="#" data-hover="Мини-игры">Мини-игры</a></li>
-                    <li class="burger__item item"><a class="link" href="#" data-hover="Мини-проекты">Мини-проекты</a>
-                    </li>
-                    <li class="burger__item item"><a class="link" href="#" data-hover="Контакты">Контакты</a></li>
-                </ul>
-
-                <button class="burger__close">
-                    <img src="public/close.svg" alt="Close icon">
-                </button>
-
-            </nav>
-
-            <button class="burger__open">
-                <img src="public/menu.svg" alt="Menu icon">
-            </button>
+            </address>
+            <button class="header__contacts-burger"></button>
+            <button class="header__contacts-burger-close"></button>
         </div>
     </header>
 
@@ -56,9 +47,9 @@
                 <div class="about__content">
                     <p class="about__text">
                         Привет! Меня зовут Анна, я увлеченный фронтенд-разработчик.<br>Создание красивых и
-                        функциональных интерфейсов — это моя страсть.<br>Я постоянно совершенствую свои навыки, изучаю
-                        новые технологии и стремлюсь к тому, чтобы каждая моя работа была лучше предыдущей.<br>Мне
-                        нравится находить элегантные решения сложных задач и работать в команде,<br>где идеи
+                        функциональных интерфейсов — это моя страсть. Я постоянно совершенствую свои навыки, изучаю
+                        новые технологии и стремлюсь к тому, чтобы каждая моя работа была лучше предыдущей. Мне
+                        нравится находить элегантные решения сложных задач и работать в команде, где идеи
                         превращаются в реальность.<br>Давайте создавать будущее вместе!
                     </p>
                 </div>
@@ -72,8 +63,7 @@
 
                 <div class="card-grid">
                     <a class="card" href="https://annyonok.github.io/aperture/" target="_blank">
-                        <div class="card__bg"
-                            style="background-image: url(public/aperture.jpg)">
+                        <div class="card__bg" style="background-image: url(public/aperture.jpg)">
                         </div>
                         <div class="card__content">
                             <p class="card__category">landing page</p>
@@ -84,8 +74,7 @@
                     </a>
 
                     <a class="card" href="https://annyonok.github.io/simply-chocolate/" target="_blank">
-                        <div class="card__bg"
-                            style="background-image: url(public/chocolate.jpg)">
+                        <div class="card__bg" style="background-image: url(public/chocolate.jpg)">
                         </div>
                         <div class="card__content">
                             <p class="card__category">landing page</p>
@@ -98,8 +87,7 @@
                     </a>
 
                     <a class="card" href="https://annyonok.github.io/nique/" target="_blank">
-                        <div class="card__bg"
-                            style="background-image: url(public/nique.jpg)">
+                        <div class="card__bg" style="background-image: url(public/nique.jpg)">
                         </div>
                         <div class="card__content">
                             <p class="card__category">многостраничный сайт</p>
@@ -111,8 +99,7 @@
                     </a>
 
                     <a class="card" href="https://annyonok.github.io/movie-app/" target="_blank">
-                        <div class="card__bg"
-                            style="background-image: url(public/movie_app.jpg)">
+                        <div class="card__bg" style="background-image: url(public/movie_app.jpg)">
                         </div>
                         <div class="card__content">
                             <p class="card__category">киносайт</p>
