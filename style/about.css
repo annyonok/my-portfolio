@@ -26,3 +26,22 @@
 .about__text {
     line-height: 30px;
 }
+
+@media (max-width: 740px) {
+    .about__content {
+        gap: 50px;
+    }
+    
+    .about__photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 620px) {
+    .about__content {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+}

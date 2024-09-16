@@ -84,7 +84,6 @@
     }
 }
 
-
 @media (max-width: 620px) {
     .mini-projects__container {
         flex-direction: column;
